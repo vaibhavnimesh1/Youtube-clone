@@ -20,15 +20,29 @@ const Comment = ({ comment }) => {
   );
 };
 
-const CommentList = ({ data }) => {
-  return data.map((comment, i) => (
-    <>
-      <Comment comment={comment} key={i} />
+// const CommentList = ({ data }) => {
+//   return data.map((comment, i) => (
+//     <>
+//       <Comment comment={comment} key={i} />
 
-      <div className=" pl-8 border-l-2 border-black-800">
-        <CommentList data={comment.replies} />
-      </div>
-    </>
+//       <div className=" pl-8 border-l-2 border-black-800">
+//         <CommentList data={comment.replies} />
+//       </div>
+//     </>
+//   ));
+// };
+
+
+const CommentList = ({ data }) => {
+  return data.map((comment,i) => (
+    <div key={i}>
+      <Comment comment={comment} />
+      {comment.replies && (
+        <div className="pl-8 border-l-2 border-black-800">
+          <CommentList data={comment.replies} />
+        </div>
+      )}
+    </div>
   ));
 };
 
@@ -36,7 +50,7 @@ const Commentscontainer = () => {
   return (
     <div>
       <h1 className=" pl-5 font-extrabold text-xl">Comments :</h1>
-      <CommentList data={commentsData} />
+      <CommentList  data={commentsData} />
     </div>
   );
 };

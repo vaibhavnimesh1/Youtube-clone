@@ -1,7 +1,6 @@
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+
+
 import { useSearchParams } from "react-router-dom";
-import { closeMenu } from "../utils/appSlices";
 import Commentscontainer from "./Commentscontainer";
 import LivechatContainer from "./LivechatContainer";
 
@@ -30,3 +29,4 @@ const Watchpage = () => {
 };
 
 export default Watchpage;
+

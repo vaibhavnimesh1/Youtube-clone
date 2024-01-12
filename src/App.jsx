@@ -14,7 +14,7 @@ const approuter = createBrowserRouter([
       element: <Maincontainer/>
     },
       {
-      path : 'watch',
+      path : 'watch/',
       element:<Watchpage/>
     }
   

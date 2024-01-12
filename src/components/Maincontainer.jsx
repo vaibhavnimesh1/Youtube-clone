@@ -8,10 +8,10 @@ const Maincontainer = () => {
     <div  className=" w-screen md:flex flex-col " >
       <ButtonList  />
       <VideoCard/>
-     
-
+    
     </div>
   )
 }
+
 
 export default Maincontainer
